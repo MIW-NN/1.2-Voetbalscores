@@ -6,4 +6,8 @@ public class Wedstrijd {
     public int bepaalWedstrijdpunten() {
         return 0;
     }
+
+    public void printUitslag() {}
+
+    public void printWedstrijdPunten() {}
 }
