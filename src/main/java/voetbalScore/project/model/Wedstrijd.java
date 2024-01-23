@@ -20,4 +20,8 @@ public class Wedstrijd {
             return 0;
         }
     }
+
+    public void printUitslag() {}
+
+    public void printWedstrijdPunten() {}
 }
