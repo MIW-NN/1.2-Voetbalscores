@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class WedstrijdPrintTests {
+public class ContestPrintTests {
 
     PrintStream StandardOut = System.out;
     ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -19,12 +19,12 @@ public class WedstrijdPrintTests {
     }
 
     @Test
-    public void givenAWedstrijd_ShouldPrintResults(){
+    public void givenAContest_ShouldPrintResults(){
 
         var tegenstander = "fc tegenstander";
-        var wedstrijd = new Wedstrijd(tegenstander, 10,90);
+        var wedstrijd = new Contest(tegenstander, 10,90);
 
-        wedstrijd.printUitslag();
+        wedstrijd.printResult();
 
         var out = outputStreamCaptor.toString();
 
@@ -34,10 +34,10 @@ public class WedstrijdPrintTests {
     }
 
     @Test
-    public void givenAWedstrijd_ShouldPrintPoints(){
-        var wedstrijd = new Wedstrijd("fc tegenstander", 10,90);
+    public void givenAContest_ShouldPrintPoints(){
+        var wedstrijd = new Contest("fc tegenstander", 10,90);
 
-        wedstrijd.printWedstrijdPunten();
+        wedstrijd.printContestPoints();
 
         Assert.assertTrue(outputStreamCaptor.toString().contains("0"));
     }
