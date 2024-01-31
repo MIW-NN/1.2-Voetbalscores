@@ -1,9 +1,9 @@
 package voetbalScore.project.model;
 
 public class Contest {
-    private static final int DEFAULD_GOALS_CONCEDED_VALUE = 0;
-    private static final int DEFAULD_GOALS_VALUE = 0;
-    private static final String DEFAULD_OPPONENT_NAME_VALUE = "onbekend";
+    private static final int DEFAULT_GOALS_CONCEDED_VALUE = 0;
+    private static final int DEFAULT_GOALS_VALUE = 0;
+    private static final String DEFAULT_OPPONENT_NAME_VALUE = "onbekend";
 
     public int goalsConceded;
     public int goals;
@@ -17,14 +17,14 @@ public class Contest {
 
     public Contest(String opponentName) {
         this.opponentName = opponentName;
-        this.goals = DEFAULD_GOALS_VALUE;
-        this.goalsConceded = DEFAULD_GOALS_CONCEDED_VALUE;
+        this.goals = DEFAULT_GOALS_VALUE;
+        this.goalsConceded = DEFAULT_GOALS_CONCEDED_VALUE;
     }
 
     public Contest() {
-        this.opponentName = DEFAULD_OPPONENT_NAME_VALUE;
-        this.goals = DEFAULD_GOALS_VALUE;
-        this.goalsConceded = DEFAULD_GOALS_CONCEDED_VALUE;
+        this.opponentName = DEFAULT_OPPONENT_NAME_VALUE;
+        this.goals = DEFAULT_GOALS_VALUE;
+        this.goalsConceded = DEFAULT_GOALS_CONCEDED_VALUE;
     }
 
     public int determineContestPoints() {
